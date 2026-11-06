@@ -1228,6 +1228,24 @@
     <mimic joint="L_middle_proximal_joint" multiplier="1" offset="0"/>
   </joint>
 
+  <!-- Tip frame for MoveIt / light-switch EE (planning marker). -->
+  <link name="L_middle_tip">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="middle_tip">
+        <color rgba="0 0.4 1 1"/>
+      </material>
+    </visual>
+  </link>
+  <joint name="L_middle_tip_joint" type="fixed">
+    <origin xyz="-0.005 -0.045 -0.004" rpy="0 0 0"/>
+    <parent link="L_middle_intermediate"/>
+    <child link="L_middle_tip"/>
+  </joint>
+
   <link name="L_ring_proximal">
     <inertial>
       <origin xyz="0.0012971 -0.011934 -0.0059999" rpy="0 0 0"/>
@@ -1633,6 +1651,24 @@
     <axis xyz="0 0 1"/>
     <limit lower="0" upper="1.7" effort="1" velocity="0.5"/>
     <mimic joint="R_middle_proximal_joint" multiplier="1" offset="0"/>
+  </joint>
+
+  <!-- Tip frame for MoveIt / light-switch EE (planning marker). -->
+  <link name="R_middle_tip">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="middle_tip">
+        <color rgba="0 0.4 1 1"/>
+      </material>
+    </visual>
+  </link>
+  <joint name="R_middle_tip_joint" type="fixed">
+    <origin xyz="-0.005 0.045 -0.004" rpy="0 0 0"/>
+    <parent link="R_middle_intermediate"/>
+    <child link="R_middle_tip"/>
   </joint>
 
   <link name="R_ring_proximal">
