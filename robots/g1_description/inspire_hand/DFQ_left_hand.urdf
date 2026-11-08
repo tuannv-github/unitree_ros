@@ -305,8 +305,9 @@
       </material>
     </visual>
   </link>
+  <!-- Tip +X = finger point (-Y hand): Rx(-π) then local Rz(+π/2). -->
   <joint name="L_middle_tip_joint" type="fixed">
-    <origin xyz="-0.005 -0.045 -0.004" rpy="0 0 0"/>
+    <origin xyz="-0.005 -0.045 -0.004" rpy="-3.141592653589793 0 -1.5707963267948966"/>
     <parent link="L_middle_intermediate"/>
     <child link="L_middle_tip"/>
   </joint>
